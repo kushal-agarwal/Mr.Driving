@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Mr. Driving-Kushal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <link rel="icon" type="image/png" href="images/ico/favicon.png" />
+    </head>
+    <body onload="done()">
+        <div id="scoreDiv">
+            <span id="score">0</span>
+            <img src="images/coin.png" id="cn">
+        </div>
+        <div class="gameHome" id="startPage">
+            <div  id="gameTitle">Mr. Driving</div>
+            <button onclick="ld()" id="playBtn"><span style="font-size:18px">Loading Assets<br>Please Wait...<br>This may take a few seconds for first time</span></button><br>
+            <div id="ldc"><div id="loading"></div></div>
+            <p>Rotate your phone & tilt left/right or tap left/right side of screen to move the car<br>Use left/right arrow key on your PC</p>
+           
+            
+            </div>
+            <script type="text/javascript">
+                (function(){                  "use strict"
+                    var hw = window.innerWidth || 360;
+                    var hh = window.innerHeight || 560;
+                    var gameHome = document.getElementById("startPage");
+                    var scoreDiv = document.getElementById("scoreDiv");
+                    if(hh > hw){
+                        gameHome.style.height = hw+"px";
+                        gameHome.style.width = hh+"px";
+                        gameHome.style.transform = "translateX("+hw+"px) rotate(90deg)";
+                        scoreDiv.style.bottom = 0;
+                        scoreDiv.style.transform = "rotate(90deg) translateX(40px)";
+                    }
+                })();
+            </script>
+        </div>
+        
+        
+        <div id="mainContainer" style="background:#0f0" >
+            <img id="city" src="images/cty.jpg">
+            <canvas id="myCanvas" style="/*background:#9de732*/" ></canvas>
+        </div>
+        <img class="aImg" id="t1" src="images/t1.png">
+        <img class="aImg" id="t2" src="images/t2.png">
+        <img class="aImg" id="t3" src="images/t5.png">
+        <img class="aImg" id="t4" src="images/t4.png">
+        <img class="aImg" id="c1" src="images/c2.png">
+        <script type="text/javascript"src="js/3d.js">     </script>
+<link rel="stylesheet"href="css/3d.css">
+ 
+ 
+    </body>
+</html>
